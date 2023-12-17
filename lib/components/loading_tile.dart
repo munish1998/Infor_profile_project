@@ -11,22 +11,29 @@ class LoadingWidgetTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ...List.generate(count, (index) => Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: Row(
-            children: [
-              const CircleAvatar(radius: 30,backgroundColor: AppColors.greyShade,),
-              sizedBox(wid: 4),
-              Container(
-                width: width ?? getFullWidth(context)*.8,
-                height: 70,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.greyShade
-                ),)
-            ],
+        ...List.generate(
+          count,
+          (index) => Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: Row(
+              children: [
+                const CircleAvatar(
+                  radius: 30,
+                  backgroundColor: AppColors.greyShade,
+                ),
+                sizedBox(wid: 4),
+                Container(
+                  width: width ?? getFullWidth(context) * .8,
+                  height: 70,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      //color: AppColors.greyShade
+                      color: AppColors.blue),
+                )
+              ],
+            ),
           ),
-        ),)
+        )
       ],
     );
   }
